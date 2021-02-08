@@ -35,10 +35,14 @@ class Deck:
             r = random.randint(0, i)
             self.cards[i], self.cards[r] = self.cards[r], self.cards[i]
 
-    def pop(self):  # removing card from deck
+    def drawCard(self):  # removing card from deck
         return self.cards.pop()
 
+deck = Deck()
+deck.shuffle()
 
+card = deck.drawCard()
+card.show()
 
 # deck of cards as classes to add/pop off etc to work down whole deck.
 # upon starting deck of cards generator will start
