@@ -35,8 +35,12 @@ class Deck:
             r = random.randint(0, i)
             self.cards[i], self.cards[r] = self.cards[r], self.cards[i]
 
-    def drawCard(self):  # removing card from deck
+    def drawCard(self):  # drawing card from deck
         return self.cards.pop()
+
+class Discard:
+    def __init__(self):
+        pass
 
 deck = Deck()
 deck.shuffle()
@@ -44,7 +48,6 @@ deck.shuffle()
 card = deck.drawCard()
 card.show()
 
-# deck of cards as classes to add/pop off etc to work down whole deck.
 # upon starting deck of cards generator will start
 # asks for 4 exercises by user
 # each card has assigned rep count
